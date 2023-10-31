@@ -15,7 +15,6 @@ function AppLayout() {
       <Header />
 
       <main>
-        <h1>Main Content :</h1>
         <Outlet />
       </main>
 
