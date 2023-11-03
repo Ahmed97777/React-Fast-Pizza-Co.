@@ -24,7 +24,9 @@ function CreateUser() {
 
       {username.length > 2 && (
         <div>
-          <button>Start ordering</button>
+          <button className="mt-4 border-2 border-stone-400 p-2">
+            Start ordering
+          </button>
         </div>
       )}
     </form>
