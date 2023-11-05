@@ -1,6 +1,11 @@
 function Username() {
   return (
-    <div className="hidden text-sm font-semibold md:block">Ahmed Khorkhash</div>
+    <div
+      className="hidden text-base font-normal
+      md:block md:text-lg lg:text-2xl"
+    >
+      Ahmed Khorkhash
+    </div>
   );
 }
 
