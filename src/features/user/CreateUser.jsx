@@ -25,7 +25,7 @@ function CreateUser() {
 
       {username.length > 2 && (
         <div>
-          <Button>Start ordering</Button>
+          <Button type="primary">Start ordering</Button>
         </div>
       )}
     </form>
