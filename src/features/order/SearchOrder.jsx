@@ -8,7 +8,7 @@ function SearchOrder() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!query) return;
-    console.log(query);
+    // console.log(query);
     navigate(`/order/${query}`);
     setQuery("");
   }
@@ -21,7 +21,7 @@ function SearchOrder() {
         placeholder:text-stone-500 focus:tracking-widest
         focus:outline-none focus:ring focus:ring-teal-500
         focus:ring-opacity-75 sm:w-64
-        sm:focus:w-72 md:text-base lg:placeholder:text-lg"
+        sm:focus:w-72 md:text-base "
         type="text"
         placeholder="Search Order #"
         value={query}
