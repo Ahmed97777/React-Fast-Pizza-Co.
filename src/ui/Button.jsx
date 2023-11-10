@@ -20,7 +20,7 @@ function Button({ children, disabled, to, type }) {
     focus:ring-offset-2 disabled:cursor-not-allowed`,
   };
 
-  if (to === "/order/new")
+  if (to)
     return (
       <Link className={styles[type]} to={to}>
         {children}
