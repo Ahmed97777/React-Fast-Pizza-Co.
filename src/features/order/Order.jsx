@@ -11,7 +11,7 @@ import OrderItem from "./OrderItem";
 
 export async function loader({ params }) {
   const order = await getOrder(params.orderId);
-  // console.log(order);
+  console.log("ordeeeeeeer:", order);
   return order;
 }
 
@@ -30,7 +30,7 @@ function Order() {
   } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
-  console.log("this is the cart data", cart);
+  // console.log("this is the cart data", cart);
 
   return (
     <div className="space-y-8 px-4 py-6">
@@ -62,7 +62,7 @@ function Order() {
 
       <ul className="divide-y divide-stone-200 border-b border-t border-stone-300">
         {cart.map((item) => (
-          <OrderItem item={item} key={item.id} />
+          <OrderItem item={item} key={item.pizzaId} />
         ))}
       </ul>
 
