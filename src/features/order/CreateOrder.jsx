@@ -176,7 +176,7 @@ function CreateOrder() {
 export async function action({ request }) {
   const formData = await request.formData(); // just a reqular web API.
   const data = Object.fromEntries(formData);
-  console.log("data:", data);
+  // console.log("data:", data);
 
   const order = {
     ...data,
@@ -184,7 +184,7 @@ export async function action({ request }) {
     priority: data.priority === "true",
   };
 
-  console.log("order after data:", order);
+  // console.log("order after data:", order);
 
   const errors = {};
   if (!isValidPhone(order.phone))
