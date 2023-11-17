@@ -1,11 +1,16 @@
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { getTotalCartPrice, getTotalCartQuantity } from "./cartSlice";
 import { formatCurrency } from "../../utils/helpers";
 
 function CartOverview() {
   const totalCartQuantity = useSelector(getTotalCartQuantity);
   const totalCartPrice = useSelector(getTotalCartPrice);
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  // console.log(currentPath);
 
   if (!totalCartQuantity) return null;
 
@@ -23,7 +28,10 @@ function CartOverview() {
         <span>{totalCartQuantity} pizzas</span>
         <span>{formatCurrency(totalCartPrice)}</span>
       </p>
-      <Link to="/cart">Open cart &rarr;</Link>
+
+      {currentPath === "/cart" ? null : (
+        <Link to="/cart">Open cart &rarr;</Link>
+      )}
     </div>
   );
 }
