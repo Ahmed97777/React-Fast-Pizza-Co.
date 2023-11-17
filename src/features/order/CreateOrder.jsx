@@ -146,7 +146,7 @@ function CreateOrder() {
             onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label className="font-medium" htmlFor="priority">
-            Want to yo give your order priority?
+            Want to yo give your order priority?(additional 20% fee)
           </label>
         </div>
 
